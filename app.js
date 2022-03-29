@@ -5,7 +5,8 @@ const userRoute=require('./routes/user.route')
 const cors=require('cors')
 const app=express();
 
-app.use(cors);
+// app.use(cors);
+
 const port=process.env.PORT||3000;
 
 mongoose.connect('mongodb+srv://lucky:y5QvxONsaSK9OD01@mycluster.rhrpn.mongodb.net/users?retryWrites=true&w=majority',()=>{

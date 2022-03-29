@@ -1,9 +1,10 @@
-const { response } = require('express');
+
 const express=require('express');
 const user=require('../module/user.model')
 const route=express.Router();
 
 route.post('/signup',(request,response)=>{
+    console.log("hello");
     console.log(request.body);
     user.create({
         username:request.body.username,
