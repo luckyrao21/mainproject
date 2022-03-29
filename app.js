@@ -5,7 +5,7 @@ const userRoute=require('./routes/user.route')
 const cors=require('cors')
 const app=express();
 
-app.use(cors);
+
 
 const port=process.env.PORT||3000;
 
@@ -13,6 +13,7 @@ mongoose.connect('mongodb+srv://lucky:y5QvxONsaSK9OD01@mycluster.rhrpn.mongodb.n
     console.log("connected")
 })
 
+app.use(cors);
 app.use(bodyparser.urlencoded({extended:true}));
 app.use(bodyparser.json());
 
