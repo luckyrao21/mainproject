@@ -14,7 +14,7 @@ route.post('/signup',(request,response)=>{
         return response.status(201).json(result);
     }).catch(err=>{
         console.log(err);
-        return response.status(500).json({message:err});
+        return response.status(500).json(err);
     })
 })
 
