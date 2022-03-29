@@ -2,7 +2,7 @@ const express=require('express');
 const bodyparser=require('body-parser');
 const mongoose=require('mongoose');
 const userRoute=require('./routes/user.route')
-const cors=require('cors')
+// const cors=require('cors')
 const app=express();
 
 
@@ -13,7 +13,7 @@ mongoose.connect('mongodb+srv://lucky:y5QvxONsaSK9OD01@mycluster.rhrpn.mongodb.n
     console.log("connected")
 })
 
-app.use(cors);
+// app.use(cors);
 app.use(bodyparser.urlencoded({extended:true}));
 app.use(bodyparser.json());
 
