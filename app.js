@@ -4,6 +4,8 @@ const mongoose=require('mongoose');
 const userRoute=require('./routes/user.route')
 const app=express();
 
+const port=process.env.PORT||3000;
+
 mongoose.connect('mongodb+srv://lucky:y5QvxONsaSK9OD01@mycluster.rhrpn.mongodb.net/users?retryWrites=true&w=majority',()=>{
     console.log("connected")
 
@@ -12,6 +14,6 @@ app.use(bodyparser.json());
 
 app.use('/',userRoute);
 })
-app.listen(3000,()=>{
+app.listen(port,()=>{
     console.log('server is running')
 })
