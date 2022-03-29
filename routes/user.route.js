@@ -1,4 +1,3 @@
-
 const express=require('express');
 const user=require('../module/user.model')
 const route=express.Router();
