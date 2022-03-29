@@ -1,3 +1,4 @@
+const { response } = require('express');
 const express=require('express');
 const user=require('../module/user.model')
 const route=express.Router();
@@ -31,6 +32,16 @@ route.post('/signin',(request,response)=>{
         }
     }).catch(err=>{
         return response.status(500).json({message:"ooops something went wrong"})
+    })
+})
+
+route.get('/user-list',(request,response)=>{
+    user.find().then(result=>{
+        console.log(result);
+        return response.status(201).json(result)
+    }).catch(err=>{
+        console.log(err)
+        return response.status(500).json({message:"oops something went wrong"})
     })
 })
 
