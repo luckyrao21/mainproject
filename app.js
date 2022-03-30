@@ -2,6 +2,7 @@ const express=require('express');
 const bodyparser=require('body-parser');
 const mongoose=require('mongoose');
 const userRoute=require('./routes/user.route')
+const cors=require('cors')
 const port=process.env.PORT ||3000;
 const app=express();
 
