@@ -12,7 +12,7 @@ mongoose.connect('mongodb+srv://luckyrao:1234@cluster1.bvxkm.mongodb.net/myFirst
     console.log(err)
 })
 
-
+app.use(cors)
 app.use(bodyparser.urlencoded({extended:true}));
 app.use(bodyparser.json());
 
