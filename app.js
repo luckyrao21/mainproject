@@ -11,7 +11,7 @@ mongoose.connect('mongodb+srv://luckyrao:1234@cluster1.bvxkm.mongodb.net/myFirst
 }).catch(err=>{
     console.log(err)
 })
-
+app.use(express.static("./public"));
 app.use(cors())
 app.use(bodyparser.urlencoded({extended:true}));
 app.use(bodyparser.json());
