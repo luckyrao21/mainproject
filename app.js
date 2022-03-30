@@ -5,8 +5,10 @@ const userRoute=require('./routes/user.route')
 const port=process.env.PORT ||3000;
 const app=express();
 
-mongoose.connect('mongodb+srv://lucky:y5QvxONsaSK9OD01@mycluster.rhrpn.mongodb.net/users?retryWrites=true&w=majority',()=>{
-    console.log("connected")
+mongoose.connect('mongodb+srv://luckyrao:1234@cluster1.bvxkm.mongodb.net/myFirstDatabase?retryWrites=true&w=majority').then(()=>{
+    console.log("success")
+}).catch(err=>{
+    console.log(err)
 })
 
 
